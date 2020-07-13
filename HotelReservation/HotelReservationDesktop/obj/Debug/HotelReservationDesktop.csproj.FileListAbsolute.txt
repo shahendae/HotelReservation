@@ -15,7 +15,6 @@ C:\Users\shahe\Documents\Visual Studio 2019\Hotel Reservation\HotelReservation\H
 C:\Users\shahe\Documents\Visual Studio 2019\Hotel Reservation\HotelReservation\HotelReservationDesktop\obj\Debug\HotelReservationDesktop.Form1.resources
 C:\Users\shahe\Documents\Visual Studio 2019\Hotel Reservation\HotelReservation\HotelReservationDesktop\obj\Debug\HotelReservationDesktop.Forms.ManageRooms.resources
 C:\Users\shahe\Documents\Visual Studio 2019\Hotel Reservation\HotelReservation\HotelReservationDesktop\obj\Debug\HotelReservationDesktop.Forms.CheckRooms.resources
-C:\Users\shahe\Documents\Visual Studio 2019\Hotel Reservation\HotelReservation\HotelReservationDesktop\obj\Debug\HotelReservationDesktop.csprojAssemblyReference.cache
 C:\Users\shahe\Documents\Visual Studio 2019\Hotel Reservation\HotelReservation\HotelReservationDesktop\obj\Debug\HotelReservationDesktop.Forms.ReservationForm.resources
 C:\Users\shahe\Documents\Visual Studio 2019\Hotel Reservation\HotelReservation\HotelReservationDesktop\obj\Debug\HotelReservationDesktop.Forms.AllReservations.resources
 C:\Users\shahe\Documents\Visual Studio 2019\Hotel Reservation\HotelReservation\HotelReservationDesktop\obj\Debug\HotelReservationDesktop.Forms.ManageTypes.resources
