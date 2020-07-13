@@ -52,7 +52,7 @@ namespace HotelReservationDesktop
         {
             Sidepanel.Height = ReservationButton.Height;
             Sidepanel.Top = ReservationButton.Top;
-            //reservationForm1.BringToFront();
+            OpenCurrentForm(new ReservationForm());
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -71,13 +71,20 @@ namespace HotelReservationDesktop
         {
             Sidepanel.Height = AllReservationButton.Height;
             Sidepanel.Top = AllReservationButton.Top;
-            //AllReservationsForm.BringToFront();
+            OpenCurrentForm(new AllReservations());
 
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ManageTypesButton_Click(object sender, EventArgs e)
+        {
+            Sidepanel.Height = ManageTypesButton.Height;
+            Sidepanel.Top = ManageTypesButton.Top;
+            OpenCurrentForm(new ManageTypes());
         }
     }
 }
