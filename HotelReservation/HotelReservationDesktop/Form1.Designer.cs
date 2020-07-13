@@ -36,7 +36,7 @@
             this.Sidepanel = new System.Windows.Forms.Panel();
             this.HomeButton = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.MinimizeButton = new FontAwesome.Sharp.IconButton();
@@ -58,7 +58,7 @@
             this.Menupanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.Menupanel.Location = new System.Drawing.Point(0, 0);
             this.Menupanel.Name = "Menupanel";
-            this.Menupanel.Size = new System.Drawing.Size(204, 542);
+            this.Menupanel.Size = new System.Drawing.Size(204, 577);
             this.Menupanel.TabIndex = 0;
             // 
             // AllReservationButton
@@ -180,18 +180,18 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(204, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(613, 10);
+            this.panel2.Size = new System.Drawing.Size(639, 10);
             this.panel2.TabIndex = 1;
             // 
-            // label1
+            // labelTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(97, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 22);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Hotel Reservation";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.Location = new System.Drawing.Point(97, 15);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(171, 22);
+            this.labelTitle.TabIndex = 2;
+            this.labelTitle.Text = "Hotel Reservation";
             // 
             // iconButton2
             // 
@@ -216,12 +216,12 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
             this.panel4.Controls.Add(this.MinimizeButton);
             this.panel4.Controls.Add(this.CloseButton);
-            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.labelTitle);
             this.panel4.Controls.Add(this.iconButton2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(204, 10);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(613, 54);
+            this.panel4.Size = new System.Drawing.Size(639, 54);
             this.panel4.TabIndex = 4;
             // 
             // MinimizeButton
@@ -234,7 +234,7 @@
             this.MinimizeButton.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.MinimizeButton.IconColor = System.Drawing.SystemColors.ControlDarkDark;
             this.MinimizeButton.IconSize = 25;
-            this.MinimizeButton.Location = new System.Drawing.Point(543, 2);
+            this.MinimizeButton.Location = new System.Drawing.Point(559, 2);
             this.MinimizeButton.Name = "MinimizeButton";
             this.MinimizeButton.Rotation = 0D;
             this.MinimizeButton.Size = new System.Drawing.Size(28, 40);
@@ -253,7 +253,7 @@
             this.CloseButton.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.CloseButton.IconColor = System.Drawing.SystemColors.ControlDarkDark;
             this.CloseButton.IconSize = 25;
-            this.CloseButton.Location = new System.Drawing.Point(577, 2);
+            this.CloseButton.Location = new System.Drawing.Point(593, 2);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Rotation = 0D;
             this.CloseButton.Size = new System.Drawing.Size(38, 49);
@@ -267,14 +267,14 @@
             this.panelCurrentForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCurrentForm.Location = new System.Drawing.Point(204, 64);
             this.panelCurrentForm.Name = "panelCurrentForm";
-            this.panelCurrentForm.Size = new System.Drawing.Size(613, 478);
+            this.panelCurrentForm.Size = new System.Drawing.Size(639, 513);
             this.panelCurrentForm.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 542);
+            this.ClientSize = new System.Drawing.Size(843, 577);
             this.Controls.Add(this.panelCurrentForm);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -296,7 +296,7 @@
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton HomeButton;
         private System.Windows.Forms.Panel Sidepanel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTitle;
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconButton MinimizeButton;

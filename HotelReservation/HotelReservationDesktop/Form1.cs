@@ -32,7 +32,7 @@ namespace HotelReservationDesktop
             panelCurrentForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            //labelTitle.Text = childForm.Text;
+            labelTitle.Text = childForm.Text;
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace HotelReservationDesktop
         {
             Sidepanel.Height = CheckRoomsButton.Height;
             Sidepanel.Top = CheckRoomsButton.Top;
-            //checkRooms1.BringToFront();
+            OpenCurrentForm(new CheckRooms());
         }
 
         private void ReservationButton_Click(object sender, EventArgs e)
@@ -65,7 +65,6 @@ namespace HotelReservationDesktop
             Sidepanel.Height = ManageRoomsButton.Height;
             Sidepanel.Top = ManageRoomsButton.Top;
             OpenCurrentForm(new ManageRooms());
-            //manageRooms1.BringToFront();
         }
 
         private void AllReservationButton_Click(object sender, EventArgs e)
