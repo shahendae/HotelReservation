@@ -40,7 +40,8 @@
             // 
             // ReservationsGridView
             // 
-            this.ReservationsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ReservationsGridView.ColumnHeadersHeight = 40;
+            this.ReservationsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.ReservationsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BookingId,
             this.GuestName,
@@ -48,11 +49,12 @@
             this.Column1,
             this.Column2,
             this.Cancel});
-            this.ReservationsGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ReservationsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReservationsGridView.Location = new System.Drawing.Point(0, 0);
             this.ReservationsGridView.Name = "ReservationsGridView";
             this.ReservationsGridView.Size = new System.Drawing.Size(623, 474);
             this.ReservationsGridView.TabIndex = 1;
+            this.ReservationsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReservationsGridView_CellClick);
             // 
             // BookingId
             // 
@@ -61,7 +63,7 @@
             // 
             // GuestName
             // 
-            this.GuestName.HeaderText = "GuestName";
+            this.GuestName.HeaderText = "Guest Name";
             this.GuestName.Name = "GuestName";
             // 
             // CheckIN
@@ -76,12 +78,13 @@
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "RoomNumber";
+            this.Column2.HeaderText = "Room Number";
             this.Column2.Name = "Column2";
+            this.Column2.Width = 98;
             // 
             // Cancel
             // 
-            this.Cancel.HeaderText = "CancelReservation";
+            this.Cancel.HeaderText = "Cancel Reservation";
             this.Cancel.Name = "Cancel";
             this.Cancel.Text = "Cancel";
             // 
@@ -92,7 +95,7 @@
             this.ClientSize = new System.Drawing.Size(623, 474);
             this.Controls.Add(this.ReservationsGridView);
             this.Name = "AllReservations";
-            this.Text = "AllReservations";
+            this.Text = "All Reservations";
             this.Load += new System.EventHandler(this.AllReservations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ReservationsGridView)).EndInit();
             this.ResumeLayout(false);
