@@ -176,6 +176,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\Home.jpeg" />
+    <Content Include="Images\hotel.ico" />
     <Content Include="Models\HotelReservationModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HotelReservationModel.edmx</DependentUpon>

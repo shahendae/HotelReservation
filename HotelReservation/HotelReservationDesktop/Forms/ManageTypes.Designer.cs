@@ -206,7 +206,7 @@
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.SearchtextBox);
             this.Name = "ManageTypes";
-            this.Text = "ManageTypes";
+            this.Text = "Manage Type of Rooms";
             this.Load += new System.EventHandler(this.ManageTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GuestnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

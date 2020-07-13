@@ -335,7 +335,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ManageRooms";
-            this.Text = "ManageRooms";
+            this.Text = "Manage Rooms";
             this.Load += new System.EventHandler(this.ManageRooms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RoomsGridView)).EndInit();
             this.ResumeLayout(false);

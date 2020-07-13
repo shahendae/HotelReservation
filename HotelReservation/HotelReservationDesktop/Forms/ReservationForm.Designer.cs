@@ -390,7 +390,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Name = "ReservationForm";
-            this.Text = "ReservationForm";
+            this.Text = "New Reservation";
             this.Load += new System.EventHandler(this.ReservationForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -40,6 +40,7 @@
             // 
             // ReservationsGridView
             // 
+            this.ReservationsGridView.AllowUserToAddRows = false;
             this.ReservationsGridView.ColumnHeadersHeight = 40;
             this.ReservationsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.ReservationsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -52,6 +53,7 @@
             this.ReservationsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReservationsGridView.Location = new System.Drawing.Point(0, 0);
             this.ReservationsGridView.Name = "ReservationsGridView";
+            this.ReservationsGridView.ReadOnly = true;
             this.ReservationsGridView.Size = new System.Drawing.Size(623, 474);
             this.ReservationsGridView.TabIndex = 1;
             this.ReservationsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReservationsGridView_CellClick);
@@ -60,32 +62,38 @@
             // 
             this.BookingId.HeaderText = "BookingId";
             this.BookingId.Name = "BookingId";
+            this.BookingId.ReadOnly = true;
             // 
             // GuestName
             // 
             this.GuestName.HeaderText = "Guest Name";
             this.GuestName.Name = "GuestName";
+            this.GuestName.ReadOnly = true;
             // 
             // CheckIN
             // 
             this.CheckIN.HeaderText = "Check-IN";
             this.CheckIN.Name = "CheckIN";
+            this.CheckIN.ReadOnly = true;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Check-OUT";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Room Number";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 98;
             // 
             // Cancel
             // 
             this.Cancel.HeaderText = "Cancel Reservation";
             this.Cancel.Name = "Cancel";
+            this.Cancel.ReadOnly = true;
             this.Cancel.Text = "Cancel";
             // 
             // AllReservations

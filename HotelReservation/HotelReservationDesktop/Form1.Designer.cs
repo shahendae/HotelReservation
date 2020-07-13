@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Menupanel = new System.Windows.Forms.Panel();
+            this.ManageTypesButton = new FontAwesome.Sharp.IconButton();
             this.AllReservationButton = new FontAwesome.Sharp.IconButton();
             this.ManageRoomsButton = new FontAwesome.Sharp.IconButton();
             this.ReservationButton = new FontAwesome.Sharp.IconButton();
@@ -42,9 +44,13 @@
             this.MinimizeButton = new FontAwesome.Sharp.IconButton();
             this.CloseButton = new FontAwesome.Sharp.IconButton();
             this.panelCurrentForm = new System.Windows.Forms.Panel();
-            this.ManageTypesButton = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.Menupanel.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panelCurrentForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Menupanel
@@ -63,6 +69,27 @@
             this.Menupanel.Size = new System.Drawing.Size(204, 541);
             this.Menupanel.TabIndex = 0;
             // 
+            // ManageTypesButton
+            // 
+            this.ManageTypesButton.FlatAppearance.BorderSize = 0;
+            this.ManageTypesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ManageTypesButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.ManageTypesButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageTypesButton.ForeColor = System.Drawing.Color.White;
+            this.ManageTypesButton.IconChar = FontAwesome.Sharp.IconChar.Bed;
+            this.ManageTypesButton.IconColor = System.Drawing.Color.White;
+            this.ManageTypesButton.IconSize = 25;
+            this.ManageTypesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ManageTypesButton.Location = new System.Drawing.Point(12, 446);
+            this.ManageTypesButton.Name = "ManageTypesButton";
+            this.ManageTypesButton.Rotation = 0D;
+            this.ManageTypesButton.Size = new System.Drawing.Size(192, 54);
+            this.ManageTypesButton.TabIndex = 7;
+            this.ManageTypesButton.Text = "   Manage Type of Rooms";
+            this.ManageTypesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ManageTypesButton.UseVisualStyleBackColor = true;
+            this.ManageTypesButton.Click += new System.EventHandler(this.ManageTypesButton_Click);
+            // 
             // AllReservationButton
             // 
             this.AllReservationButton.FlatAppearance.BorderSize = 0;
@@ -70,11 +97,11 @@
             this.AllReservationButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.AllReservationButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AllReservationButton.ForeColor = System.Drawing.Color.White;
-            this.AllReservationButton.IconChar = FontAwesome.Sharp.IconChar.Info;
+            this.AllReservationButton.IconChar = FontAwesome.Sharp.IconChar.Tasks;
             this.AllReservationButton.IconColor = System.Drawing.Color.White;
             this.AllReservationButton.IconSize = 25;
             this.AllReservationButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AllReservationButton.Location = new System.Drawing.Point(12, 321);
+            this.AllReservationButton.Location = new System.Drawing.Point(12, 289);
             this.AllReservationButton.Name = "AllReservationButton";
             this.AllReservationButton.Rotation = 0D;
             this.AllReservationButton.Size = new System.Drawing.Size(192, 54);
@@ -91,16 +118,16 @@
             this.ManageRoomsButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.ManageRoomsButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageRoomsButton.ForeColor = System.Drawing.Color.White;
-            this.ManageRoomsButton.IconChar = FontAwesome.Sharp.IconChar.Bed;
+            this.ManageRoomsButton.IconChar = FontAwesome.Sharp.IconChar.Key;
             this.ManageRoomsButton.IconColor = System.Drawing.Color.White;
             this.ManageRoomsButton.IconSize = 25;
             this.ManageRoomsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ManageRoomsButton.Location = new System.Drawing.Point(12, 404);
+            this.ManageRoomsButton.Location = new System.Drawing.Point(12, 367);
             this.ManageRoomsButton.Name = "ManageRoomsButton";
             this.ManageRoomsButton.Rotation = 0D;
             this.ManageRoomsButton.Size = new System.Drawing.Size(192, 54);
             this.ManageRoomsButton.TabIndex = 5;
-            this.ManageRoomsButton.Text = "     Manage Rooms";
+            this.ManageRoomsButton.Text = "   Manage Rooms";
             this.ManageRoomsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ManageRoomsButton.UseVisualStyleBackColor = true;
             this.ManageRoomsButton.Click += new System.EventHandler(this.ManageRoomsButton_Click);
@@ -112,16 +139,16 @@
             this.ReservationButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.ReservationButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReservationButton.ForeColor = System.Drawing.Color.White;
-            this.ReservationButton.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            this.ReservationButton.IconChar = FontAwesome.Sharp.IconChar.Suitcase;
             this.ReservationButton.IconColor = System.Drawing.Color.White;
             this.ReservationButton.IconSize = 25;
             this.ReservationButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ReservationButton.Location = new System.Drawing.Point(12, 243);
+            this.ReservationButton.Location = new System.Drawing.Point(12, 208);
             this.ReservationButton.Name = "ReservationButton";
             this.ReservationButton.Rotation = 0D;
             this.ReservationButton.Size = new System.Drawing.Size(192, 54);
             this.ReservationButton.TabIndex = 4;
-            this.ReservationButton.Text = "    New Reservation";
+            this.ReservationButton.Text = "   New Reservation";
             this.ReservationButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ReservationButton.UseVisualStyleBackColor = true;
             this.ReservationButton.Click += new System.EventHandler(this.ReservationButton_Click);
@@ -137,12 +164,12 @@
             this.CheckRoomsButton.IconColor = System.Drawing.Color.White;
             this.CheckRoomsButton.IconSize = 25;
             this.CheckRoomsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CheckRoomsButton.Location = new System.Drawing.Point(12, 157);
+            this.CheckRoomsButton.Location = new System.Drawing.Point(12, 127);
             this.CheckRoomsButton.Name = "CheckRoomsButton";
             this.CheckRoomsButton.Rotation = 0D;
             this.CheckRoomsButton.Size = new System.Drawing.Size(192, 54);
             this.CheckRoomsButton.TabIndex = 3;
-            this.CheckRoomsButton.Text = "    Check Available Rooms";
+            this.CheckRoomsButton.Text = "   Check Available Rooms";
             this.CheckRoomsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CheckRoomsButton.UseVisualStyleBackColor = true;
             this.CheckRoomsButton.Click += new System.EventHandler(this.CheckRoomsButton_Click);
@@ -150,7 +177,7 @@
             // Sidepanel
             // 
             this.Sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.Sidepanel.Location = new System.Drawing.Point(0, 74);
+            this.Sidepanel.Location = new System.Drawing.Point(0, 44);
             this.Sidepanel.Name = "Sidepanel";
             this.Sidepanel.Size = new System.Drawing.Size(10, 54);
             this.Sidepanel.TabIndex = 2;
@@ -166,7 +193,7 @@
             this.HomeButton.IconColor = System.Drawing.Color.White;
             this.HomeButton.IconSize = 25;
             this.HomeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HomeButton.Location = new System.Drawing.Point(12, 74);
+            this.HomeButton.Location = new System.Drawing.Point(12, 44);
             this.HomeButton.Name = "HomeButton";
             this.HomeButton.Rotation = 0D;
             this.HomeButton.Size = new System.Drawing.Size(192, 54);
@@ -189,7 +216,7 @@
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(97, 15);
+            this.labelTitle.Location = new System.Drawing.Point(114, 14);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(171, 22);
             this.labelTitle.TabIndex = 2;
@@ -216,6 +243,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(201)))), ((int)(((byte)(201)))));
+            this.panel4.Controls.Add(this.iconButton3);
+            this.panel4.Controls.Add(this.iconButton1);
             this.panel4.Controls.Add(this.MinimizeButton);
             this.panel4.Controls.Add(this.CloseButton);
             this.panel4.Controls.Add(this.labelTitle);
@@ -266,32 +295,61 @@
             // 
             // panelCurrentForm
             // 
+            this.panelCurrentForm.Controls.Add(this.pictureBox1);
             this.panelCurrentForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCurrentForm.Location = new System.Drawing.Point(204, 64);
             this.panelCurrentForm.Name = "panelCurrentForm";
             this.panelCurrentForm.Size = new System.Drawing.Size(639, 477);
             this.panelCurrentForm.TabIndex = 5;
             // 
-            // ManageTypesButton
+            // pictureBox1
             // 
-            this.ManageTypesButton.FlatAppearance.BorderSize = 0;
-            this.ManageTypesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManageTypesButton.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.ManageTypesButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManageTypesButton.ForeColor = System.Drawing.Color.White;
-            this.ManageTypesButton.IconChar = FontAwesome.Sharp.IconChar.Bed;
-            this.ManageTypesButton.IconColor = System.Drawing.Color.White;
-            this.ManageTypesButton.IconSize = 25;
-            this.ManageTypesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ManageTypesButton.Location = new System.Drawing.Point(12, 484);
-            this.ManageTypesButton.Name = "ManageTypesButton";
-            this.ManageTypesButton.Rotation = 0D;
-            this.ManageTypesButton.Size = new System.Drawing.Size(192, 54);
-            this.ManageTypesButton.TabIndex = 7;
-            this.ManageTypesButton.Text = "   Manage Type of Rooms";
-            this.ManageTypesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ManageTypesButton.UseVisualStyleBackColor = true;
-            this.ManageTypesButton.Click += new System.EventHandler(this.ManageTypesButton_Click);
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(639, 477);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.Black;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.iconButton1.IconColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.iconButton1.IconSize = 25;
+            this.iconButton1.Location = new System.Drawing.Point(593, 3);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(38, 49);
+            this.iconButton1.TabIndex = 6;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.ForeColor = System.Drawing.Color.Black;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.iconButton3.IconColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.iconButton3.IconSize = 25;
+            this.iconButton3.Location = new System.Drawing.Point(559, 3);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Rotation = 0D;
+            this.iconButton3.Size = new System.Drawing.Size(28, 40);
+            this.iconButton3.TabIndex = 5;
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
             // Form1
             // 
@@ -303,12 +361,15 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Menupanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Home";
             this.Menupanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panelCurrentForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -330,6 +391,9 @@
         private FontAwesome.Sharp.IconButton AllReservationButton;
         private System.Windows.Forms.Panel panelCurrentForm;
         private FontAwesome.Sharp.IconButton ManageTypesButton;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

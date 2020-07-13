@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.RoomsGridView = new System.Windows.Forms.DataGridView();
-            this.checkAvailability = new FontAwesome.Sharp.IconButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.CheckOutPicker = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.CheckInPicker = new System.Windows.Forms.DateTimePicker();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkAvailability = new FontAwesome.Sharp.IconButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CheckOutPicker = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.CheckInPicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.RoomsGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +59,36 @@
             this.RoomsGridView.Name = "RoomsGridView";
             this.RoomsGridView.Size = new System.Drawing.Size(623, 199);
             this.RoomsGridView.TabIndex = 14;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "RoomNumber";
+            this.Column1.Name = "Column1";
+            // 
+            // RoomName
+            // 
+            this.RoomName.HeaderText = "RoomName";
+            this.RoomName.Name = "RoomName";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "FloorNumber";
+            this.Column2.Name = "Column2";
+            // 
+            // RoomType
+            // 
+            this.RoomType.HeaderText = "RoomType";
+            this.RoomType.Name = "RoomType";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "View";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Price";
+            this.Column4.Name = "Column4";
             // 
             // checkAvailability
             // 
@@ -118,36 +148,6 @@
             this.CheckInPicker.Size = new System.Drawing.Size(200, 20);
             this.CheckInPicker.TabIndex = 8;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "RoomNumber";
-            this.Column1.Name = "Column1";
-            // 
-            // RoomName
-            // 
-            this.RoomName.HeaderText = "RoomName";
-            this.RoomName.Name = "RoomName";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "FloorNumber";
-            this.Column2.Name = "Column2";
-            // 
-            // RoomType
-            // 
-            this.RoomType.HeaderText = "RoomType";
-            this.RoomType.Name = "RoomType";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "View";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Price";
-            this.Column4.Name = "Column4";
-            // 
             // CheckRooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,7 +161,7 @@
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.CheckInPicker);
             this.Name = "CheckRooms";
-            this.Text = "CheckRooms";
+            this.Text = "Check Available Rooms";
             this.Load += new System.EventHandler(this.CheckRooms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RoomsGridView)).EndInit();
             this.ResumeLayout(false);

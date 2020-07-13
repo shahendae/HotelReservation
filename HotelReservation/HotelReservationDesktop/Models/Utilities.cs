@@ -12,6 +12,7 @@ namespace HotelReservationDesktop.Models
     {
         public static void FormatGridView(DataGridView gridView)
         {
+            gridView.AllowUserToAddRows = false;
             gridView.BorderStyle = BorderStyle.None;
             gridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(230, 230, 230);
             gridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;

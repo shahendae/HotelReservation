@@ -39,6 +39,7 @@ namespace HotelReservationDesktop
         {
             Sidepanel.Height = HomeButton.Height;
             Sidepanel.Top = HomeButton.Top;
+            pictureBox1.BringToFront();
         }
 
         private void CheckRoomsButton_Click(object sender, EventArgs e)
