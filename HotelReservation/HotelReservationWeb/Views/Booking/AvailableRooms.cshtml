@@ -46,8 +46,10 @@
                                         <li><span>Room Number:</span> @room.RoomId</li>
                                     </ul>
                                     <hr>
-                                    <p class="pt-1">@Html.ActionLink("Book Now", "Reservation", "Booking",
-                                                   new { id = room.RoomId}, null)</p>
+                                    <p class="pt-1">
+                                        @Html.ActionLink("Book Now", "Reservation", "Booking",
+                                   new { id = room.RoomId }, null)
+                                </p>
                                 </div>
                             </div>
                         </div>
