@@ -22,8 +22,7 @@ namespace HotelReservationWeb.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public IActionResult Rooms()
         {
             return View();
         }
