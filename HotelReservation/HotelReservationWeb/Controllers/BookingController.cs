@@ -54,20 +54,23 @@ namespace HotelReservationWeb.Controllers
         [HttpPost]
         public IActionResult AddReservation(BookRoom book)
         {
-            Guest guest = _guestRepository.FindGuestById(book.guest.GuestId);
-            if(guest == null)
+            if (ModelState.IsValid)
             {
-                _guestRepository.AddNewGuest(book.guest);
-            }
-            Booking newBook = new Booking()
-            {
-                CheckIn = checkIn,
-                CheckOut = checkOut,
-                RoomId = book.RoomId,
-                GuestId = book.guest.GuestId
-            };
+                Guest guest = _guestRepository.FindGuestById(book.guest.GuestId);
+                if (guest == null)
+                {
+                    _guestRepository.AddNewGuest(book.guest);
+                }
+                Booking newBook = new Booking()
+                {
+                    CheckIn = checkIn,
+                    CheckOut = checkOut,
+                    RoomId = book.RoomId,
+                    GuestId = book.guest.GuestId
+                };
 
-            _bookRepository.AddNewReservation(newBook);
+                _bookRepository.AddNewReservation(newBook);
+            }
 
             return RedirectToAction("Index", "Home");
         }

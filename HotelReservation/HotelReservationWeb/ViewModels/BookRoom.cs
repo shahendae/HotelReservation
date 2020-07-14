@@ -10,7 +10,6 @@ namespace HotelReservationWeb.ViewModels
     public class BookRoom
     {
         public Guest guest { get; set; }
-        //public CheckRooms checkRooms { get; set; }
         public int RoomId { get; set; }
     }
 }

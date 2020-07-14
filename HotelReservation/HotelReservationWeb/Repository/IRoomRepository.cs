@@ -9,7 +9,7 @@ namespace HotelReservationWeb.Repository
 {
     public interface IRoomRepository
     {
-        public IEnumerable<Room> CheckAvailabileRooms(CheckRooms reservation);
-        public IEnumerable<Room> CheckAllRooms(CheckRooms reservation);
+        IEnumerable<Room> CheckAvailabileRooms(CheckRooms reservation);
+        IEnumerable<Room> CheckAllRooms(CheckRooms reservation);
     }
 }

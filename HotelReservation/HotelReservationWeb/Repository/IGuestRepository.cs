@@ -8,7 +8,7 @@ namespace HotelReservationWeb.Repository
 {
     public interface IGuestRepository
     {
-        public void AddNewGuest(Guest guest);
-        public Guest FindGuestById(int id);
+        void AddNewGuest(Guest guest);
+        Guest FindGuestById(int id);
     }
 }

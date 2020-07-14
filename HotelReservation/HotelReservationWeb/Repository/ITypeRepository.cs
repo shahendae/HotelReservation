@@ -8,6 +8,6 @@ namespace HotelReservationWeb.Repository
 {
     public interface ITypeRepository
     {
-        public IEnumerable<RoomType> GetAll();
+        IEnumerable<RoomType> GetAll();
     }
 }

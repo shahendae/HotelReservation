@@ -8,6 +8,6 @@ namespace HotelReservationWeb.Repository
 {
     public interface IBookRepository
     {
-        public void AddNewReservation(Booking booking);
+        void AddNewReservation(Booking booking);
     }
 }
