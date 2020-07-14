@@ -1,4 +1,5 @@
-﻿@{
+﻿@model CheckRooms
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -22,21 +23,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="#" class="booking-form">
+                    <form asp-controller="Booking" asp-action="AvailableRooms"  method="post" class="booking-form">
                         <div class="row">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <div class="col-md-3 d-flex">
                                 <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                     <div class="wrap">
-                                        <label for="#">Check-in Date</label>
-                                        <input type="text" class="form-control checkin_date" placeholder="Check-in date">
+                                        <label asp-for="CheckIn">Check-in Date</label>
+                                        <input asp-for="CheckIn" type="text" value="@DateTime.Now" class="form-control checkin_date" placeholder="Check-in date">
+                                        <span asp-validation-for="CheckIn" class="text-danger"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3 d-flex">
                                 <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                     <div class="wrap">
-                                        <label for="#">Check-out Date</label>
-                                        <input type="text" class="form-control checkout_date" placeholder="Check-out date">
+                                        <label asp-for="CheckOut">Check-out Date</label>
+                                        <input asp-for="CheckOut" value="@DateTime.Now" type="text" class="form-control checkout_date" placeholder="Check-out date">
+                                        <span asp-validation-for="CheckOut" class="text-danger"></span>
                                     </div>
                                 </div>
                             </div>
@@ -46,15 +50,8 @@
                                         <label for="#">Room</label>
                                         <div class="form-field">
                                             <div class="select-wrap">
-                                                <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                                <select name="" id="" class="form-control">
-                                                    <option value="">Suite</option>
-                                                    <option value="">Family Room</option>
-                                                    <option value="">Deluxe Room</option>
-                                                    <option value="">Classic Room</option>
-                                                    <option value="">Superior Room</option>
-                                                    <option value="">Luxury Room</option>
-                                                </select>
+                                                @Html.DropDownListFor(model => model.TypeId, Model.RoomTypes, "Select Room Type",
+                                               htmlAttributes: new { @class = "form-control", id = "TypeId" })
                                             </div>
                                         </div>
                                     </div>

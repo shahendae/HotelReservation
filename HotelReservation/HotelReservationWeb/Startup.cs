@@ -1,4 +1,5 @@
 using HotelReservationWeb.Models;
+using HotelReservationWeb.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,10 @@ namespace HotelReservationWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ITypeRepository, TypeRepository>();
+            services.AddScoped<IRoomRepository, RoomRepository>();
+            services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<IGuestRepository, GuestRepository>();
             services.AddDbContext<HotelReservationContext>(options => 
             options.UseSqlServer(Configuration.GetConnectionString("HotelReservationDatabase")));
             services.AddControllersWithViews();
